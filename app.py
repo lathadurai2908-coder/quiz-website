@@ -5,9 +5,9 @@ from datetime import datetime
 app = Flask(__name__)
 
 db = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    password="rishmesh_2009",
+    host="sql213.infinityfree.com",
+    user="if0_42056649",
+    password="GSijY17cUw8r",
     database="quizdb"
 )
 
