@@ -8,7 +8,7 @@ db = mysql.connector.connect(
     host="sql213.infinityfree.com",
     user="if0_42056649",
     password="GSijY17cUw8r",
-    database="quizdb"
+    database="if0_42056649_quizdb"
 )
 
 cursor = db.cursor()
