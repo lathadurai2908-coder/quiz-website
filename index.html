@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz</title>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+        const radios = document.querySelectorAll('input[type="radio"]');
+
+        radios.forEach(radio => {
+
+            radio.addEventListener("click", function () {
+
+                if (this.wasChecked) {
+                    this.checked = false;
+                    this.wasChecked = false;
+                } else {
+
+                    document
+                        .querySelectorAll('input[name="' + this.name + '"]')
+                        .forEach(r => r.wasChecked = false);
+
+                    this.wasChecked = true;
+                }
+            });
+        });
+    });
+    </script>
+</head>
+<body>
+
+<h1>Ultimate Quiz Challenge</h1>
+
+<form action="/submit" method="POST">
+
+Name:
+<input type="text" name="name">
+
+<br><br>
+
+<h3>Question 1</h3>
+
+<p>Hydraulic brakes and Hydraulic lift are devices in which fluids are used for transmitting</p>
+
+<input type="radio" name="q1" value="A"> Momentum<br>
+<input type="radio" name="q1" value="B"> Power<br>
+<input type="radio" name="q1" value="C"> Force<br>
+<input type="radio" name="q1" value="D"> Pressure<br>
+
+<br>
+
+<h3>Question 2</h3>
+
+<p>A perfect black body has the unique characteristic feature as</p>
+
+<input type="radio" name="q2" value="A"> Neither an absorber nor radiator<br>
+<input type="radio" name="q2" value="B"> A good absorber and a good radiator<br>
+<input type="radio" name="q2" value="C"> A good radiator only<br>
+<input type="radio" name="q2" value="D"> A good absorber only<br>
+
+
+<br>
+
+<h3>Question 3</h3>
+
+<p>A particle moves in a central force field F(r). Which quantity is always conserved?</p>
+
+<input type="radio" name="q3" value="A"> Linear Momentum<br>
+<input type="radio" name="q3" value="B"> Angular Momentum<br>
+<input type="radio" name="q3" value="C"> Mechanical Energy<br>
+<input type="radio" name="q3" value="D"> Potential Energy<br>
+
+
+<br>
+
+<h3>Question 4</h3>
+
+<p>Which of the following quantities is conserved in an elastic collision?</p>
+
+<input type="radio" name="q4" value="A"> Momentum only<br>
+<input type="radio" name="q4" value="B"> Kinetic Energy only<br>
+<input type="radio" name="q4" value="C"> Both Momentum and Kinetic Energy<br>
+<input type="radio" name="q4" value="D"> Neither Momentum nor Kinetic Energy<br>
+
+
+<br>
+
+<h3>Question 5</h3>
+
+<p>For a wave described by 𝑦(𝑥,𝑡)=𝐴sin(𝑘𝑥−𝜔𝑡), the phase velocity is:</p>
+
+<input type="radio" name="q5" value="A"> 𝜔<br>
+<input type="radio" name="q5" value="B"> 𝑘<br>
+<input type="radio" name="q5" value="C"> 𝜔/𝑘<br>
+<input type="radio" name="q5" value="D"> 𝑘/𝜔<br>
+
+
+<br>
+
+<h3>Question 6</h3>
+
+<p>A charged particle enters a uniform magnetic field with velocity perpendicular to the field. Its motion is:</p>
+
+<input type="radio" name="q6" value="A"> Linear with constant speed<br>
+<input type="radio" name="q6" value="B"> Circular with constant speed<br>
+<input type="radio" name="q6" value="C"> Spiral with increasing radius<br>
+<input type="radio" name="q6" value="D"> Spiral with decreasing radius<br>
+
+
+<br>
+
+<h3>Question 7</h3>
+
+<p>What phenomenon explains why a pencil appears bent when placed in water?</p>
+
+<input type="radio" name="q7" value="A"> Reflection<br>
+<input type="radio" name="q7" value="B"> Diffraction<br>
+<input type="radio" name="q7" value="C"> Refraction<br>
+<input type="radio" name="q7" value="D"> Interference<br>
+
+
+<br>
+
+<h3>Question 8</h3>
+
+<p>Which law states that the pressure exerted by a gas is inversely proportional to its volume at constant temperature?</p>
+
+<input type="radio" name="q8" value="A"> Boyle's Law<br>
+<input type="radio" name="q8" value="B"> Charles's Law<br>
+<input type="radio" name="q8" value="C"> Newton's Law<br>
+<input type="radio" name="q8" value="D"> Hooke's Law<br>
+
+
+<br>
+
+<h3>Question 9</h3>
+
+<p>Which Maxwell equation implies that a changing magnetic field induces an electric field?</p>
+
+<input type="radio" name="q9" value="A"> Gauss's Law<br>
+<input type="radio" name="q9" value="B"> Gauss's Law for magnetism<br>
+<input type="radio" name="q9" value="C"> Faraday's Law<br>
+<input type="radio" name="q9" value="D"> Ampere-Maxwell Law<br>
+
+
+<br>
+
+<h3>Question 10</h3>
+
+<p>The gravitational potential inside a uniform spherical shell is:</p>
+
+<input type="radio" name="q10" value="A"> Zero everywhere<br>
+<input type="radio" name="q10" value="B"> Constant everywhere but non-zero<br>
+<input type="radio" name="q10" value="C"> Inversely proportional to the distance from the center<br>
+<input type="radio" name="q10" value="D"> Directly proportional to the distance from the center<br>
+
+
+<br>
+
+<h3>Question 11</h3>
+
+<p>Which of the following has the highest first ionization energy?</p>
+
+<input type="radio" name="q11" value="A"> Na<br>
+<input type="radio" name="q11" value="B"> Mg<br>
+<input type="radio" name="q11" value="C"> Al<br>
+<input type="radio" name="q11" value="D"> Si<br>
+
+
+<br>
+
+<h3>Question 12</h3>
+
+<p>What is the hybridization of the central atom in SF₆?</p>
+
+<input type="radio" name="q12" value="A"> sp³<br>
+<input type="radio" name="q12" value="B"> sp³d<br>
+<input type="radio" name="q12" value="C"> sp³d²<br>
+<input type="radio" name="q12" value="D"> sp²<br>
+
+
+<br>
+
+<h3>Question 13</h3>
+
+<p>Which compound exhibits hydrogen bonding between its molecules?</p>
+
+<input type="radio" name="q13" value="A"> CH₄<br>
+<input type="radio" name="q13" value="B"> NH₃<br>
+<input type="radio" name="q13" value="C"> H₂S<br>
+<input type="radio" name="q13" value="D"> PH₃<br>
+
+
+<br>
+
+<h3>Question 14</h3>
+
+<p>What is the oxidation number of sulfur in H₂SO₄?</p>
+
+<input type="radio" name="q14" value="A"> +4<br>
+<input type="radio" name="q14" value="B"> +5<br>
+<input type="radio" name="q14" value="C"> +6<br>
+<input type="radio" name="q14" value="D"> +8<br>
+
+
+<br>
+
+<h3>Question 15</h3>
+
+<p>Which factor does NOT affect the rate of a chemical reaction?</p>
+
+<input type="radio" name="q15" value="A"> Temperature<br>
+<input type="radio" name="q15" value="B"> Concentration<br>
+<input type="radio" name="q15" value="C"> Catalyst<br>
+<input type="radio" name="q15" value="D"> Enthalpy Change<br>
+
+
+<br>
+
+<h3>Question 16</h3>
+
+<p>In an electrochemical cell, oxidation occurs at the:</p>
+
+<input type="radio" name="q16" value="A"> Cathode<br>
+<input type="radio" name="q16" value="B"> Anode<br>
+<input type="radio" name="q16" value="C"> Salt Bridge<br>
+<input type="radio" name="q16" value="D"> Electrolyte<br>
+
+
+<br>
+
+<h3>Question 17</h3>
+
+<p>Which species acts as both a Bronsted–Lowry acid and base?</p>
+
+<input type="radio" name="q17" value="A"> HCl<br>
+<input type="radio" name="q17" value="B"> NH₄⁺<br>
+<input type="radio" name="q17" value="C"> H₂O<br>
+<input type="radio" name="q17" value="D"> NaOH<br>
+
+
+<br>
+
+<h3>Question 18</h3>
+
+<p>What is the shape of the ClF₃ molecule according to VSEPR theory?</p>
+
+<input type="radio" name="q18" value="A"> Trigonal Planar<br>
+<input type="radio" name="q18" value="B"> T-shaped<br>
+<input type="radio" name="q18" value="C"> Trigonal Bipyramidal<br>
+<input type="radio" name="q18" value="D"> Linear<br>
+
+
+<br>
+
+<h3>Question 19</h3>
+
+<p>Which law explains the relationship between gas volume and temperature at constant pressure?</p>
+
+<input type="radio" name="q19" value="A"> Boyle's Law<br>
+<input type="radio" name="q19" value="B"> Charles's Law<br>
+<input type="radio" name="q19" value="C"> Avogadro's Law<br>
+<input type="radio" name="q19" value="D"> Dalton's Law<br>
+
+
+<br>
+
+<h3>Question 20</h3>
+
+<p>Which of the following complexes will show geometrical isomerism?</p>
+
+<input type="radio" name="q20" value="A"> [Ag(NH₃)₂]⁺<br>
+<input type="radio" name="q20" value="B"> [Fe(CN)₆]³⁻<br>
+<input type="radio" name="q20" value="C"> [Pt(NH₃)₂Cl₂]<br>
+<input type="radio" name="q20" value="D"> [Zn(OH)₄]²⁻<br>
+
+
+<br>
+
+<h3>Question 21</h3>
+
+<p>The Treaty of Tordesillas (1494) divided newly discovered lands between which two countries?</p>
+
+<input type="radio" name="q21" value="A"> Spain and France<br>
+<input type="radio" name="q21" value="B"> Spain and Portugal<br>
+<input type="radio" name="q21" value="C"> England and Spain<br>
+<input type="radio" name="q21" value="D"> Portugal and Netherlands<br>
+
+
+<br>
+
+<h3>Question 22</h3>
+
+<p>The Chabahar Port, strategically important to India, is located in:</p>
+
+<input type="radio" name="q22" value="A"> Iraq<br>
+<input type="radio" name="q22" value="B"> Oman<br>
+<input type="radio" name="q22" value="C"> Iran<br>
+<input type="radio" name="q22" value="D"> Yemen<br>
+
+
+<br>
+
+<h3>Question 23</h3>
+
+<p>Which of the following is NOT a Fundamental Duty under the Indian Constitution?</p>
+
+<input type="radio" name="q23" value="A"> To safeguard public property<br>
+<input type="radio" name="q23" value="B"> To promote harmony<br>
+<input type="radio" name="q23" value="C"> To vote in elections<br>
+<input type="radio" name="q23" value="D"> To protect the environment<br>
+
+
+<br>
+
+<h3>Question 24</h3>
+
+<p>The unit “Henry” is related to the measurement of:</p>
+
+<input type="radio" name="q24" value="A"> Capacitance<br>
+<input type="radio" name="q24" value="B"> Resistance<br>
+<input type="radio" name="q24" value="C"> Inductance<br>
+<input type="radio" name="q24" value="D"> Magnetic flux<br>
+
+
+<br>
+
+<h3>Question 25</h3>
+
+<p>Who among the following wrote Arthashastra?</p>
+
+<input type="radio" name="q25" value="A"> Panini<br>
+<input type="radio" name="q25" value="B"> Kalidasa<br>
+<input type="radio" name="q25" value="C"> Chanakya<br>
+<input type="radio" name="q25" value="D"> Patanjali<br>
+
+
+<br>
+
+<h3>Question 26</h3>
+
+<p>Which country first introduced paper currency?</p>
+
+<input type="radio" name="q26" value="A"> India<br>
+<input type="radio" name="q26" value="B"> China<br>
+<input type="radio" name="q26" value="C"> Persia<br>
+<input type="radio" name="q26" value="D"> Greece<br>
+
+
+<br>
+
+<h3>Question 27</h3>
+
+<p>The Kyoto Protocol is related to which global issue?</p>
+
+<input type="radio" name="q27" value="A"> Nuclear Disarmament<br>
+<input type="radio" name="q27" value="B"> Biodiversity Conservation<br>
+<input type="radio" name="q27" value="C"> Climate Change<br>
+<input type="radio" name="q27" value="D"> Ozone Depletion<br>
+
+
+<br>
+
+<h3>Question 28</h3>
+
+<p>Which vitamin is water-soluble?</p>
+
+<input type="radio" name="q28" value="A"> Vitamin A<br>
+<input type="radio" name="q28" value="B"> Vitamin D<br>
+<input type="radio" name="q28" value="C"> Vitamin E<br>
+<input type="radio" name="q28" value="D"> Vitamin C<br>
+
+
+<br>
+
+<h3>Question 29</h3>
+
+<p>The term “Blue Economy” is associated with:</p>
+
+<input type="radio" name="q29" value="A"> Space Exploration<br>
+<input type="radio" name="q29" value="B"> Marine Resources and Sustainability<br>
+<input type="radio" name="q29" value="C"> Renewable Energy<br>
+<input type="radio" name="q29" value="D"> Digital Economy<br>
+
+
+<br>
+
+<h3>Question 30</h3>
+
+<p>Who was the first non-European to win a Nobel Prize?</p>
+
+<input type="radio" name="q30" value="A"> Rabindranath Tagore<br>
+<input type="radio" name="q30" value="B"> C.V. Raman<br>
+<input type="radio" name="q30" value="C"> Mother Teresa<br>
+<input type="radio" name="q30" value="D"> Homi Bhabha<br>
+
+<br><br>
+
+<input type="submit" value="Submit Quiz">
+
+</form>
+
+<br><br>
+
+
+</body>
+</html>
